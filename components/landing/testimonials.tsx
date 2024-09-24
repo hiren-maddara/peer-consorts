@@ -10,23 +10,26 @@ const testimonials = [
     {
         name: "Brenna Goyette",
         occupation: "Student, MUK",
-        feedback:
-            "Integer id nunc sit semper purus. Bibendum at lacus ut arcu blandit montes vitae auctor libero.",
+        feedback: "Integer id nunc sit semper purus. Bibendum at lacus ut arcu blandit montes vitae auctor libero.",
+        verified: true
     },
     {
         name: "Leslie Alexander",
         occupation: "Studet, @CEDAT",
         feedback: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil.",
+        verified: false
     },
     {
         name: "Michael Foster",
         occupation: "Student, @CHS",
         feedback: "Quia dolorem qui et. Atque quo aliquid sit eos officia. Dolores similique laboriosam quaerat cupiditate.",
+        verified: true
     },
     {
         name: "Dries Vincent",
         occupation: "@driesvincent",
         feedback: "Consequatur ut atque. Itaque nostrum molestiae id veniam eos cumque.",
+        verified: false
     },
     {
         name: "Michael Foster",
@@ -49,11 +52,16 @@ export default function Testimonials() {
                     <Card key={`testimonial-${index + 1}`} className="shadow-lg border border-dashed h-min pt-6">
 
                         <CardContent>
-                            <blockquote className="text-gray-700 italic">{testimonial.feedback}</blockquote>
+                            <blockquote
+                                className="text-muted-foreground italic">{testimonial.feedback}
+
+                            </blockquote>
                         </CardContent>
                         <CardFooter className="flex flex-col items-start justify-center">
                             <p className="font-bold">
-                                {testimonial.name}
+                                {testimonial.name}{testimonial.verified && ", "}
+
+                                <span className="font-normal text-xs italic text-muted-foreground">{testimonial.verified ? "verified" : null}</span>
                             </p>
                             <p className="text-sm text-gray-500">{testimonial.occupation}</p>
 
