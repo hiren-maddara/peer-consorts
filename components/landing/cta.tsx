@@ -1,9 +1,8 @@
-import { title } from "process";
+import { Contact, FilePen, HandCoins, Send } from "lucide-react";
+import Link from "next/link";
 import MaxWidthWrapper from "../max-width-wrapper";
 import SectionHeading from "../section-heading";
-import { Contact, FilePen, HandCoins, Send } from "lucide-react";
 import { Button } from "../ui/button";
-import Link from "next/link";
 
 const steps = [
     {
@@ -42,8 +41,8 @@ export default function CTA() {
             <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
                 <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                     {/* Steps to Complete */}
-                    {steps.map(step => (
-                        <div className="relative pl-16">
+                    {steps.map((step, index) => (
+                        <div className="relative pl-16" key={`step-${index + 1}`}>
                             <dt className="text-base font-semibold leading-7 text-gray-900">
                                 <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500">
                                     <step.icon />
