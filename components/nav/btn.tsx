@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-export default function Btn({ children, href, className }: { children: ReactNode, href: string, className: string }) {
+export default function Btn({ children, href, className }: { children: ReactNode, href: string, className?: string }) {
     return <Button
         className={cn(
             "text-muted-foreground font-semibold",

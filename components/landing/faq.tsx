@@ -34,7 +34,7 @@ const faqs = [
 
 export default function FAQ() {
     return (
-        <MaxWidthWrapper className="text-base">
+        <MaxWidthWrapper className="text-base mt-20">
 
             <SectionHeading>
                 Frequently asked questions

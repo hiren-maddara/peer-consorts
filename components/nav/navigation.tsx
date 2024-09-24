@@ -17,7 +17,7 @@ export default function Navigation() {
                     <Btn href="/">Home</Btn>
                     <Btn href="/about">About</Btn>
                     <Btn href="/members">Members</Btn>
-                    <Btn href="/admin">Contact</Btn>
+                    <Btn href="/admin">Admin</Btn>
                 </div>
 
                 <Button className="text-muted bg-orange-600" variant="default" asChild>

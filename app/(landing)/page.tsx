@@ -8,8 +8,8 @@ export default function LandingPage() {
         <>
             <Hero />
             <CTA />
-            <Testimonials />
             <FAQ />
+            <Testimonials />
 
         </>
     )
