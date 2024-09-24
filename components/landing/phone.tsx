@@ -11,7 +11,7 @@ export default function Phone() {
             </path>
             <path d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z" fill="#343E4E">
             </path>
-            <foreignObject width="316" height="684" clip-path="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)" transform="translate(24 24)">
+            <foreignObject width="316" height="684" clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)" transform="translate(24 24)">
                 <img alt="" src="https://tailwindui.com/img/component-images/mobile-app-screenshot.png" />
             </foreignObject>
         </svg>

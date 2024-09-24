@@ -40,17 +40,16 @@ export default function FAQ() {
                 Frequently asked questions
             </SectionHeading>
 
-            <Accordion type="single" collapsible className="w-full mt-6 px-6 text-base font-medium">
+            <Accordion type="single" collapsible className="w-full mt-6 px-6 text-lg font-medium tracking-wide">
 
                 {faqs.map((item, index) => (
                     <AccordionItem value={`item-${index + 1}`} key={index}>
                         <AccordionTrigger className="font-bold">{item.title}</AccordionTrigger>
-                        <AccordionContent>
+                        <AccordionContent className="font-normal italic">
                             {item.content}
                         </AccordionContent>
                     </AccordionItem>
                 ))}
-
             </Accordion>
         </MaxWidthWrapper>
     )

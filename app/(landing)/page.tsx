@@ -1,12 +1,16 @@
+import CTA from "@/components/landing/cta";
 import FAQ from "@/components/landing/faq";
 import Hero from "@/components/landing/hero";
-import MaxWidthWrapper from "@/components/max-width-wrapper";
+import Testimonials from "@/components/landing/testimonials";
 
 export default function LandingPage() {
     return (
         <>
             <Hero />
+            <CTA />
+            <Testimonials />
             <FAQ />
+
         </>
     )
 }

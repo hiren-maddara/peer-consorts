@@ -7,7 +7,7 @@ import HiringBanner from "./hiring";
 
 export default function Hero() {
     return (
-        <MaxWidthWrapper className="flex gap-10">
+        <MaxWidthWrapper className="flex gap-10 p-8 mb-8">
             <div className="flex flex-col gap-y-6 justify-center items-start ">
 
                 <HiringBanner />
