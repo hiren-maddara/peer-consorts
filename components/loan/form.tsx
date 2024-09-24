@@ -6,14 +6,13 @@ import { Checkbox } from "@/components/ui/checkbox"; // shadcn checkbox
 import { Input } from "@/components/ui/input"; // Assuming shadcn input component is being used
 import { Label } from "@/components/ui/label"; // shadcn label
 import { Textarea } from "@/components/ui/textarea"; // Assuming shadcn textarea component is being used
-import { ReactNode, useState, useTransition } from "react";
-import MaxWidthWrapper from "../max-width-wrapper";
-import { Asterisk, FilePlus, ImageIcon, Loader2, MousePointerSquareDashed } from "lucide-react";
-import { cn } from "@/lib/utils";
-import BlobBg from "../blob-bg";
-import Dropzone, { FileRejection } from 'react-dropzone'
 import { useToast } from "@/hooks/use-toast";
-import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { Asterisk, ImageIcon, Loader2, MousePointerSquareDashed } from "lucide-react";
+import { ReactNode, useState, useTransition } from "react";
+import Dropzone, { FileRejection } from 'react-dropzone';
+import BlobBg from "../blob-bg";
+import MaxWidthWrapper from "../max-width-wrapper";
 import { Progress } from "../ui/progress";
 
 
@@ -55,7 +54,7 @@ export default function LoanForm() {
 
     const { toast } = useToast()
     const [isDragOver, setIsDragOver] = useState<boolean>(false)
-    const [uploadProgress, setUploadProgress] = useState<number>(0)
+    const [uploadProgress] = useState<number>(0)
 
     // const router = useRouter()
 
@@ -84,18 +83,20 @@ export default function LoanForm() {
     }
 
     const onDropAccepted = (acceptedFiles: File[]) => {
+        console.log(acceptedFiles)
     //   startUpload(acceptedFiles, { configId: undefined })
 
         setIsDragOver(false)
     }
 
-    const [isPending, startTransition] = useTransition()
+    const [isPending] = useTransition()
 
     //placeholder vars
     const isUploading = false
 
     return (
         <MaxWidthWrapper className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+
             <form className="">
                 <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-7">
                     <div className="col-span-5 lg:col-span-2 lg:py-12">
