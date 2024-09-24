@@ -43,13 +43,13 @@ export default function CTA() {
                     {/* Steps to Complete */}
                     {steps.map((step, index) => (
                         <div className="relative pl-16" key={`step-${index + 1}`}>
-                            <dt className="text-base font-semibold leading-7 text-gray-900">
-                                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500">
+                            <div className="text-foreground text-base font-semibold leading-7 ">
+                                <div className="text-accent-foreground absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500">
                                     <step.icon />
                                 </div>
                                 {step.title}
-                            </dt>
-                            <dd className="mt-2 text-base leading-7 text-gray-600">
+                            </div>
+                            <dd className="text-muted-foreground mt-2 text-base leading-7">
                                 {step.content}
                             </dd>
                         </div>

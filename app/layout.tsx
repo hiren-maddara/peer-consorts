@@ -1,11 +1,12 @@
-import BlobBg from "@/components/blob-bg";
 import Footer from "@/components/footer";
 import Navbar from "@/components/nav/navbar";
+import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import Head from "next/head";
+import "./globals.css";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -35,12 +36,20 @@ export default function RootLayout({
           inter.className
         )}
       >
-        <Navbar />
+        <ThemeProvider
+          enableSystem
+          defaultTheme="light"
+          attribute="class"
+          disableTransitionOnChange
+          themes={["light", "dark"]}
+        >
+          <Navbar />
 
-        {children}
+          {children}
 
-        <Footer />
-        <BlobBg />
+          <Footer />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

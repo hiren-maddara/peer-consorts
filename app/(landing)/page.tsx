@@ -1,3 +1,4 @@
+import BlobBg from "@/components/blob-bg";
 import CTA from "@/components/landing/cta";
 import FAQ from "@/components/landing/faq";
 import Hero from "@/components/landing/hero";
@@ -10,6 +11,7 @@ export default function LandingPage() {
             <CTA />
             <FAQ />
             <Testimonials />
+            <BlobBg />
 
         </>
     )

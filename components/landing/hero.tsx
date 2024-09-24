@@ -24,7 +24,7 @@ export default function Hero() {
                 </p>
 
                 <Button
-                    className="text-muted bg-orange-600 gap-3 flex justify-center items-center py-4 rounded-xl hover:bg-orange-600/95 transition-all shadow-sm hover:shadow-md"
+                    className="text-muted bg-orange-600 gap-3 flex justify-center items-center py-4 rounded-xl hover:bg-orange-600/95 transition-all shadow-sm hover:shadow-md dark:text-foreground"
                     variant="secondary" asChild>
                     <Link href="/loan">
                         <span className="text-sm font-semibold hover:underline">
