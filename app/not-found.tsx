@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function notFound() {
     return (
-        <MaxWidthWrapper className="flex flex-col items-center justify-center gap-8 h-[80vh]">
+        <MaxWidthWrapper className="flex flex-col items-center justify-center gap-8 h-[70vh]">
             <h3 className="text-5xl font-bold text-foreground">
                 404
             </h3>

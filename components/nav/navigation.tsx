@@ -16,8 +16,8 @@ export default function Navigation() {
 
                     <Btn href="/">Home</Btn>
                     <Btn href="/about">About</Btn>
-                    <Btn href="/members">Members</Btn>
-                    <Btn href="/login">Admin</Btn>
+                    <Btn href="/team">Team</Btn>
+                    <Btn href="/dashboard">Admin</Btn>
                 </div>
 
                 <Button className="text-muted dark:text-foreground bg-orange-600" variant="default" asChild>
@@ -38,8 +38,8 @@ export default function Navigation() {
                     <DropdownMenuContent className="z-[150] flex flex-col items-start justify-center">
                         <Btn href="/">Home</Btn>
                         <Btn href="/about">About</Btn>
-                        <Btn href="/members">Members</Btn>
-                        <Btn href="/admin">Contact</Btn>
+                        <Btn href="/team">Team</Btn>
+                        <Btn href="/dashboard">Admin</Btn>
                     </DropdownMenuContent>
                 </DropdownMenu>
 
