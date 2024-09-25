@@ -38,7 +38,7 @@ export default function AboutPage() {
 
             <Values />
 
-            <MaxWidthWrapper className="flex gap-y-8 items-center justify-center transition-all">
+            <MaxWidthWrapper className="flex gap-y-8 items-center justify-center transition-all mb-20">
                 <Button variant="link" className="flex gap-1">
                     View Members
                     <ArrowRight className="h-4 w-4 text-foreground" />

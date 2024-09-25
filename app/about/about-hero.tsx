@@ -3,7 +3,7 @@ import MaxWidthWrapper from "@/components/max-width-wrapper";
 export default function AboutHero() {
     return (
         <MaxWidthWrapper className="overflow-clip flex flex-col md:flex-row items-center gap-8 my-8">
-            <div className="flex flex-col p-2 gap-y-2 basis-1/2 shrink-0">
+            <div className="flex flex-col p-2 gap-y-8 basis-1/2 shrink-0">
                 <h1 className="text-3xl font-bold lg:text-5xl">
                     We're changing how students view loans.
                 </h1>
