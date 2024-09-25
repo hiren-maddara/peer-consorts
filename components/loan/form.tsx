@@ -14,6 +14,7 @@ import Dropzone, { FileRejection } from 'react-dropzone';
 import BlobBg from "../blob-bg";
 import MaxWidthWrapper from "../max-width-wrapper";
 import { Progress } from "../ui/progress";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "../ui/select";
 
 
 
@@ -84,7 +85,7 @@ export default function LoanForm() {
 
     const onDropAccepted = (acceptedFiles: File[]) => {
         console.log(acceptedFiles)
-    //   startUpload(acceptedFiles, { configId: undefined })
+        //   startUpload(acceptedFiles, { configId: undefined })
 
         setIsDragOver(false)
     }
@@ -116,7 +117,7 @@ export default function LoanForm() {
                     <div className="col-span-5 lg:col-span-5 lg:p-12 flex flex-col gap-4 shadow-md border-solid border border-gray-400 rounded-lg p-6">
                         <InputGroup required label="Full name">
                             <Input type="text" id="default-search"
-                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground ring-inset focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
+                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground   focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
                                 placeholder="Name..." required />
                         </InputGroup>
 
@@ -124,7 +125,7 @@ export default function LoanForm() {
                             required
                             label="Email">
                             <Input type="text" id="default-search"
-                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground ring-inset focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
+                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground   focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
                                 placeholder="Email address..."
                                 required
                             />
@@ -134,7 +135,7 @@ export default function LoanForm() {
                             required
                             label="Address">
                             <Input type="text" id="default-search"
-                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground ring-inset focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
+                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground   focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
                                 placeholder="Residential address..."
                                 required
                             />
@@ -144,7 +145,7 @@ export default function LoanForm() {
                             required
                             label="Date of birth">
                             <Input type="date" id="default-search"
-                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground ring-inset focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
+                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground   focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
                                 placeholder="24-10-2000..."
                                 required
                             />
@@ -154,7 +155,7 @@ export default function LoanForm() {
                             required
                             label="Amount">
                             <Input type="number" id="default-search"
-                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground ring-inset focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
+                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground   focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
                                 placeholder="UGX"
                                 required
                             />
@@ -164,7 +165,7 @@ export default function LoanForm() {
                             required
                             label="Department (students)">
                             <Input type="text" id="default-search"
-                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground ring-inset focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
+                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground   focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
                                 placeholder="CEDAT"
                                 required
                             />
@@ -174,12 +175,30 @@ export default function LoanForm() {
                             required
                             label="Document">
 
+                            <Select>
+                                <SelectTrigger
+                                    className="w-full h-11 mb-4 shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm ring-offset-0 text-muted-foreground focus-visible:ring-offset-0 focus:ring-offset-0 focus:ring-orange-600/80"
+                                >
+                                    <SelectValue
+                                        placeholder="Choose a document type" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                        <SelectLabel>Documents</SelectLabel>
+                                        <SelectItem value="apple">Student ID</SelectItem>
+                                        <SelectItem value="banana">National ID</SelectItem>
+                                        <SelectItem value="blueberry">Passport</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+
                             <div className={cn(
-                                'h-32 rounded-lg bg-gray-800/5 p-2 ring-inset ring-gray-900/10 lg:rounded-lg flex justify-center flex-col items-center border border-dashed border-x-gray-400',
+                                'h-32 rounded-lg bg-gray-800/5 p-2   ring-gray-900/10 lg:rounded-lg flex justify-center flex-col items-center border border-dashed border-x-gray-400',
                                 {
                                     'ring-blue-900/25 bg-blue-900/10': isDragOver,
                                 }
                             )}>
+
                                 <Dropzone
                                     onDropRejected={onDropRejected}
                                     onDropAccepted={onDropAccepted}
@@ -240,10 +259,20 @@ export default function LoanForm() {
 
                         <InputGroup
                             required
+                            label="Security item">
+                            <Input type="text" id="default-search"
+                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground   focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
+                                placeholder="Laptop..."
+                                required
+                            />
+                        </InputGroup>
+
+
+                        <InputGroup
                             label="Description">
                             <Textarea id="default-search"
                                 cols={5}
-                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground ring-inset focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
+                                className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground   focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
                                 placeholder="Some background could increase the chances of consideration..."
                                 required
                             />
