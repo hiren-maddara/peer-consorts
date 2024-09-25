@@ -5,7 +5,7 @@ export default function Intro() {
     return (
         <MaxWidthWrapper className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-10 mt-10 mb-24 px-8">
 
-            <Card className="p-6 flex flex-col gap-2 border-solid border-orange-600/50">
+            <Card className="p-6 flex flex-col gap-2 border-solid border-orange-600/50 shadow-lg bg-background">
                 <CardTitle className="text-4xl font-semibold">
                     Loans on your terms
                     <CardDescription className="mt-1">
@@ -18,7 +18,7 @@ export default function Intro() {
                 </CardContent>
             </Card>
 
-            <Card className="p-6 flex flex-col gap-2 border-solid border-orange-600/50">
+            <Card className="p-6 flex flex-col gap-2 border-solid border-orange-600/50 shadow-lg">
                 <CardTitle className="text-4xl font-semibold">
                     Grow with the community
                     <CardDescription className="mt-1">
@@ -30,7 +30,7 @@ export default function Intro() {
                     We offer financial support you need, when you need it. With flexible repayment plans and low interest rates that adapt to your unique situation
                 </CardContent>
             </Card>
-            <Card className="p-6 flex flex-col gap-y-2 border-solid border-orange-600/50">
+            <Card className="p-6 flex flex-col gap-y-2 border-solid border-orange-600/50 shadow-lg">
                 <CardTitle className="text-4xl font-semibold">
                     Hassle-free solutions
                     <CardDescription className="mt-1">

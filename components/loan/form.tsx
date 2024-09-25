@@ -17,7 +17,6 @@ import { Progress } from "../ui/progress";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "../ui/select";
 
 
-
 function InputGroup({
     required,
     label,
@@ -35,7 +34,7 @@ function InputGroup({
             className
         )}
         >
-            <Label className="flex  items-center mb-2 text-gray-600 text-sm font-medium">
+            <Label className="flex  items-center mb-2 text-secondary-foreground text-sm font-medium">
                 {label}
                 {required && (
                     <Asterisk fill="#EF4444" className="ml-1 h-3 w-3" color="#EF4444" />
@@ -114,7 +113,7 @@ export default function LoanForm() {
                         <BlobBg />
                     </div>
 
-                    <div className="col-span-5 lg:col-span-5 lg:p-12 flex flex-col gap-4 shadow-md border-solid border border-gray-400 rounded-lg p-6">
+                    <div className="col-span-5 lg:col-span-5 lg:p-12 flex flex-col gap-4 shadow-md border-solid border border-gray-400/20 rounded-lg p-6">
                         <InputGroup required label="Full name">
                             <Input type="text" id="default-search"
                                 className="block w-full h-11 px-5 py-2.5 bg-white leading-7 font-normal shadow-xs  bg-transparent border-solid border border-gray-300 rounded-md text-sm placeholder:text-muted-foreground text-foreground   focus-visible:ring-orange-600/80 focus-visible:ring-offset-0"
